@@ -1,5 +1,12 @@
+const score1 = document.querySelector(".score1");
+const score2 = document.querySelector(".score2");
+const images = document.querySelectorAll(".image");
+const winner = document.querySelector(".winner");
+
+let mySelect = ""
 let computer = 0
 let player = 0
+
 let computerGuess = function getComputerChoice () {
     const choice = ["rock", "paper", "scissors"];
     const randomGenerator = Math.floor(Math.random()*choice.length);
@@ -7,27 +14,32 @@ let computerGuess = function getComputerChoice () {
     return result;
 }
     
-function playRound(playerSelection, computerSelection){
-    if(playerSelection == computerSelection){
-            player = player+1;
-        }else{
-           computer = computer + 1;
-        }
-}
+
+
+
 
 function game(){
     for(let i =0; i<5; i++){
-    let computerSelection = computerGuess;
-    let playerSelection = (prompt("Enter Rock, Paper or Scissors")).toLowerCase;
-   
-        playRound(playerSelection, computerSelection)
+
+images.forEach((image) => {
+    image.addEventListener("click", (e)=>{
+        const selected = e.currentTarget.classList;
+        if(selected == computerGuess){    
+            player++;
+            score2.textContent = player;
+        }
+        else{
+            computer++;
+            score1.textContent = computer;
+        }
+    })
+});
     }
     
     if(computer>player){
-        return "Computer Won"
+        winner.textContent= "Computer Won";
     }else{
-        return "Player Won"
+        winner.textContent= "Player Won"
     }
 }
 
-console.log(game());

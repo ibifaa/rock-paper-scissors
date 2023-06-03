@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,600;1,400&family=Poppins:ital,wght@0,800;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-        <script src="script.js"></script>
+    <main>
+        <header>
+            <h1 class="center">Game of Choice</h1>
+        </header>
+        <section>
+            <h3 class="center">What will you use to change your world</h3>
+            <div class="image-section center">
+                <img class="image  rock"  id = "rock" src="images/rock.jpg" alt="rock">
+                <img class="image  scissors"id = "scissors" src="images/scissors.jpg" alt="scissors">
+                <img class="image  paper"id = "paper" src="images/paper.jpg" alt="paper">
+            </div>
+            <div class="result-section">
+                <div class="player-section flex">
+                    <h4 class="player">Computer </h4>
+                    <h4 class="player">You </h4>
+                </div>
+                <div class="score-section flex">
+                    <button  class="score computerScore"> 0 </button>
+                    <button class="score playerScore"> 0 </button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <h3 class="winner center">Computer Won the Game</h3>
+        </footer>
+    </main>
+        <script src="main.js"></script>
 </body>
 </html>
